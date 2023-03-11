@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>HOME</title>
+</head>
+<body>
+    <div class="heading">
+        <strong>
+            TODO LIST
+        </strong>
+    </div>
+    <div class="addtask">
+        <button><a id="addtask" href="{% url 'addtask' %}"><strong>ADD TASK</strong></a></button>
+    </div>
+   
+    <div class="taskcontainer">
+        <h2 id="taskcontainerheading">YOUR TASKS</h2>
+        {% for i in context %}
+        <ul>
+            <li>
+               <strong>{{i | capfirst }}</strong><a class="btn" href="{% url 'delete' i.title %}"><button><b>Delete</b></button></a>&nbsp<a class="btn" href="{% url 'update' i.title %}"><button><b>Update</b></button></a>
+            <hr>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

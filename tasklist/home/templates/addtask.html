@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'addtask.css' %}">
+    <title>addtask</title>
+</head>
+<body>
+    <div class="heading">
+        <strong>
+            TODO LIST
+        </strong>
+    </div>
+    <div class="formdiv">
+        <form action="addtask" method="POST">
+            {% csrf_token %}
+            <strong>
+                TaskTitle: <input type="text" placeholder="type your task name" name="TaskTitle"/>
+            </strong>
+                    <input id='button' type="submit" value="click to add" />
+        </form>
+
+    </div>
+</body>
+</html>

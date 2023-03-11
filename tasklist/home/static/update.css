@@ -1,0 +1,42 @@
+body{
+    background-color: #00ffff;
+}
+.heading{
+    width:auto;
+    margin-top: 0;
+    margin-left: 0;
+    background-color:rgb(5, 62, 53);;
+    color: white;
+    text-align: center;
+    font-size:xx-large;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+}
+.formdiv{
+    width: 90%;
+    margin-top:1cm;
+    height: 35px;
+    margin-left: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.formdiv form input{
+    width: 90%;
+    height: 15px;
+    padding: 20px;
+    margin-top: 2cm;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: center;
+}
+.formdiv form #button{
+    background-color:rgb(5, 62, 53);
+    margin-left: 90px;
+    margin-top: 1cm;
+    padding-bottom: 40px;
+    color: white;
+    font-size: x-large;
+    width: 90%;
+
+}
